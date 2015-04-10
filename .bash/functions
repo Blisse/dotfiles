@@ -1,0 +1,45 @@
+function choice {
+  CHOICE=''
+  local prompt="$*"
+  local answer
+
+  read -p "$prompt" answer
+  
+  case "$answer" in
+    [yY1] ) CHOICE='y';;
+    [nN0] ) CHOICE='n';;
+    *     ) CHOICE="$answer";;
+  esac
+}
+
+function ss {
+  if [ -e script/rails ]; then
+    script/rails server $@
+  else
+    script/server $@
+  fi
+}
+
+function sc {
+  if [ -e script/rails ]; then
+    script/rails console $@
+  else
+    script/console $@
+  fi
+}
+
+function sg {
+  if [ -e script/rails ]; then
+    script/rails generate $@
+  else
+    script/generate $@
+  fi
+}
+
+function br {
+  if [ -e Gemfile ]; then
+    bundle exec rake $@
+  else
+    rake $@
+  fi
+}

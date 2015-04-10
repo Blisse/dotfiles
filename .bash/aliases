@@ -1,0 +1,31 @@
+alias ..='cd ..'
+
+# git aliases
+alias gp="git pull;git submodule init -q;git submodule update"
+alias gdc='git diff --cached|mate'
+alias gdm='git diff|mate'
+alias gsm='git show|mate'
+alias gs='git status'
+
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm='rm -I --preserve-root'
+ 
+# confirmation #
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+
+## Colorize the ls output ##
+alias ls='ls --color=auto'
+ 
+## Use a long listing format ##
+alias ll='ls -la'
+ 
+## Show hidden files ##
+alias l.='ls -d .* --color=auto'
+
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
