@@ -4,7 +4,7 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # Folders
-alias github='cd C:/Users/Victor/Documents/GitHub'
+alias github-folder-xps='cd C:/Users/Victor/Documents/GitHub'
 alias victor='cd C:/Users/Victor/'
 
 # Ruby Fix
